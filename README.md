@@ -19,3 +19,24 @@
     
     -webkit-box-flex: 1;
     定义子容器占的比例, 具体计算规则,父容器-定宽,剩余的按比例等分。
+
+
+git init
+
+git remote add origin url
+
+git config --global user.name ''
+
+git config --global user.email ''
+
+git fetch origin master :ysh
+
+git diff ysh
+
+git merge ysh
+
+git add .
+
+git commit -m "..."
+
+git push -u origin master
