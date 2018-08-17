@@ -2,9 +2,30 @@
 # appcan
 # appcan
 # appcan
-1.appcan 不支持es6
+
+
+1.appcan 不支持es6（否则有些手机不支持）
+
 2.appcan 极光推送（证书要对应）
-3.appcan 在线打包要选择插件（比如打电话，文件下载，极光推送，友盟统计）
+
+3.appcan 在线打包时用的的插件可能要选择插件（比如打电话，文件下载，极光推送，友盟统计，微信分享等）
+
+4.启动页 name : root 有可能被跳转重置 root 不起效果
+
+5.苹果推送要配置 
+<config desc="" type="ENTITLEMENTS">
+  <entitlement type="apns"></entitlement>
+</config> 
+
+6.安卓打包应该选择压缩模式，输入框和键盘有'顶'的效果
+
+7.建议不适用swiperjs的轮播图 （效果不好且不流畅，图片渲染延时等问题）用appcan自带的轮播组件
+
+8.appcan 可以用flex布局 （毕竟比display:box更新）
+
+9.很多用了 !imporant 调样式要注意
+
+10.appcan 苹果手机最好别用window.location.href 跳转 页面会报错一连串字符 用appcan自带的页面跳转
 
 
 
