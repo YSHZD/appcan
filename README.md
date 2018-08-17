@@ -1,4 +1,17 @@
 # appcan
+# appcan
+# appcan
+# appcan
+1.appcan 不支持es6
+2.appcan 极光推送（证书要对应）
+3.appcan 在线打包要选择插件（比如打电话，文件下载，极光推送，友盟统计）
+
+
+
+
+
+
+
 
  弹性布局 
  display:-webkit-box;
