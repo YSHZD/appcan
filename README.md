@@ -74,3 +74,27 @@ git add .
 git commit -m "..."
 
 git push -u origin master
+
+
+
+
+苹果手机处理比较大的字符串直接崩溃（解压）
+function unzip(b64Data){
+  var strData   = atob(b64Data);
+  // Convert binary string to character-number array
+  var charData  = strData.split('').map(function(x){return x.charCodeAt(0);});
+  // Turn number array into byte-array
+  var binData   = new Uint8Array(charData);
+  // // unzip
+  var data    = pako.inflate(binData);
+  var ysh = new Uint16Array(data);
+  // Convert gunzipped byteArray back to ascii string:
+  //strData   = String.fromCharCode.apply(null, new Uint16Array(data));
+  var res = "";
+  var chunks = 8 * 1024;
+  for(var i=0 ;i< ysh.length / chunks; i++){
+  	res += String.fromCharCode.apply(null, ysh.slice(i*chunks,(i+1)*chunks))
+  }
+  return res;
+}
+
